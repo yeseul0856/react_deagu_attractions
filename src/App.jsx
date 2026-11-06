@@ -10,7 +10,7 @@ const DAEGU_CENTER = [35.8714, 128.6014];
 
 // 관광명소 목록을 XML로 받아서 JS 객체 배열로 변환
 async function fetchAttractions() {
-  const url = `http://apis.data.go.kr/6270000/getTourKorAttract/getTourKorAttractList?pageNo=1&numOfRows=300&ServiceKey=${API_KEY}`;
+  const url = `https://apis.data.go.kr/6270000/getTourKorAttract/getTourKorAttractList?pageNo=1&numOfRows=300&ServiceKey=${API_KEY}`;
   const response = await fetch(url);
   const text = await response.text();
   const xml = new DOMParser().parseFromString(text, "application/xml");
